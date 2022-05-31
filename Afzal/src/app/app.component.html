@@ -1,0 +1,84 @@
+<div class="card">
+    <form [formGroup]="userForm">
+        <div class="mt-5">
+            <div class ="form-row">
+                <div class = "col-md-12">
+                    <div class="form-group">
+                        <label>First Name</label>
+                    </div>
+                    <div class = "form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" formControlName="firstName" placeholder="FirstName">
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-md-12">
+                    <div class="form-group">
+                        <label>Last Name</label>
+                    </div>
+                    <div class = "form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" formControlName="lastName" placeholder="LastName">
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-md-12">
+                    <div class="form-group">
+                        <label>City</label>
+                    </div>
+                    <div class = "form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" formControlName="city" placeholder="City">
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-md-12">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                    </div>
+                    <div class = "form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" formControlName="phoneNumber" placeholder="Phone Number"></
+                        </div>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="form-row mt-4">
+                    <div class = "col-md-6">
+                        <button type="button" class = "btn btn-primary" (click)="addData()"> Submit </button> &nbsp; &nbsp; &nbsp;
+                        <button type="button" class = "btn btn-primary" (click)="reset()"> Reset </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </form><br><br>
+
+    <div class = "col-md-8 mt-4 mb-4">
+        <table class = "table table-bordered">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>City</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *nrFor ="listData">
+                    <td><span>{{item.firstName}}</span></td>
+                    <td><span>{{item.lastName}}</span></td>
+                    <td><span>{{item.city}}</span></td>
+                    <td><span>{{item.phoneNumber}}</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+</div>
